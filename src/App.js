@@ -1,21 +1,21 @@
-
-import Profile from './components/Profile';
-import user from './social-profile/user.json';
-
+import Profile from './components/social-profile/Profile';
+import user from './components/social-profile/user.json';
+import FriendList from './components/friend-list/FriendList';
+import friends from './components/friend-list/friends.json';
 
 export default function App() {
-    return (
-        <div>
-            <Profile
-                avatar={user.avatar}
-                username={user.username}
-                tag={user.tag}
-                location={user.location}
-                followers={user.stats.followers}
-                views={user.stats.views}
-                likes={user.stats.likes}
-            />
-        </div>
-    
+  return (
+    <div>
+      <Profile
+        avatar={user.avatar}
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}
+      />
+      <FriendList items={friends} />
+    </div>
   );
 }
