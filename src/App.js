@@ -2,6 +2,8 @@ import Profile from './components/social-profile/Profile';
 import user from './components/social-profile/user.json';
 import FriendList from './components/friend-list/FriendList';
 import friends from './components/friend-list/friends.json';
+import Section from './components/statistics/Section';
+import data from './components/statistics/data.json';
 
 export default function App() {
   return (
@@ -16,6 +18,7 @@ export default function App() {
         likes={user.stats.likes}
       />
       <FriendList items={friends} />
+      <Section items={data} />
     </div>
   );
 }
