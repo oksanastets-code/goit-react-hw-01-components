@@ -8,7 +8,7 @@ import TransactionHistory from './components/transaction-history/TransactionHist
 import transactions from './components/transaction-history/transactions.json';
 export default function App() {
   return (
-    <div>
+    <>
       <Profile
         avatar={user.avatar}
         username={user.username}
@@ -22,6 +22,6 @@ export default function App() {
       <Section title="Upload stats" stats={data} />
       <Section stats={data} />
       <TransactionHistory items={transactions} />
-    </div>
+    </>
   )
 }
