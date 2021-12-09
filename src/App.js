@@ -4,7 +4,8 @@ import FriendList from './components/friend-list/FriendList';
 import friends from './components/friend-list/friends.json';
 import Section from './components/statistics/Section';
 import data from './components/statistics/data.json';
-
+import TransactionHistory from './components/transaction-history/TransactionHistory';
+import transactions from './components/transaction-history/transactions.json';
 export default function App() {
   return (
     <div>
@@ -19,7 +20,8 @@ export default function App() {
       />
       <FriendList items={friends} />
       <Section title="Upload stats" stats={data} />
-      <Section stats={data} />;
+      <Section stats={data} />
+      <TransactionHistory items={transactions} />
     </div>
   )
 }
