@@ -4,7 +4,7 @@ export default function Profile({ avatar, username, tag, location, followers, vi
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt="User avatar" width="300" class="avatar" />
+        <img src={avatar} alt="User avatar" width="300" className="avatar" />
         <p className="name">{username}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
