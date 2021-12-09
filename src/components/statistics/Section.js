@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
-import Statistics from './Statistics';
-export default function Section({ items }) {
+
+export default function Section({ title, stats }) {
   return (
     <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+       {title && <h2 className="title">{title}</h2>}
       <ul className="stat-list">
-        {items.map(item => (
-          <li key={item.id} className="item">
-                <Statistics
-                    label={item.label}
-                    percentage={item.percentage}
-                />
+        {stats.map(stat => (
+          <li key={stat.id} className="item">
+            <span className="label">{stat.label}</span>
+            <span className="percentage">{stat.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -18,9 +16,12 @@ export default function Section({ items }) {
   );
 }
 Section.propTypes = {
-  items: PropTypes.arrayOf(
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     }),
   ),
 };

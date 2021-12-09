@@ -18,7 +18,8 @@ export default function App() {
         likes={user.stats.likes}
       />
       <FriendList items={friends} />
-      <Section items={data} />
+      <Section title="Upload stats" stats={data} />
+      <Section stats={data} />;
     </div>
-  );
+  )
 }
