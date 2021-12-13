@@ -6,6 +6,7 @@ import Section from './components/statistics/Section';
 import data from './components/statistics/data.json';
 import TransactionHistory from './components/transaction-history/TransactionHistory';
 import transactions from './components/transaction-history/transactions.json';
+
 export default function App() {
   return (
     <>
@@ -23,5 +24,5 @@ export default function App() {
       <Section stats={data} />
       <TransactionHistory items={transactions} />
     </>
-  )
+  );
 }
